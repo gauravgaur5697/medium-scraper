@@ -1,0 +1,267 @@
+// Place all the styles related to the Scrapper controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// color
+$light-grey : #707070;
+$light-green: #018f69;
+$blue: #144fec;
+
+// sizes
+$main-width: 700px;
+
+
+body {
+    background-color: #ececec80;
+}
+
+.scrapperContainer {
+    width: $main-width !important;
+}
+
+
+.related--tags {
+    .tags--detail {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        margin-right: 5px;
+
+        span {
+            border-radius: 20px;
+            background-color: $blue !important;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #222 !important;
+            }
+        }
+    }
+}
+
+.blog--overview {
+    padding: 15px;
+    margin: 20px auto 0px;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    border: 1px solid rgba(0, 0, 0, .09);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    &:hover {
+        box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
+        -webkit-box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
+    }
+
+    .blog-overview-header {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .blog-overview-image {
+        padding-bottom: 15px;
+
+        img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+
+        img.no-image {
+            height: 0px !important;
+        }
+    }
+
+    .blog-over-content {
+        text-decoration: none !important;
+
+        .blog-overview-title {
+            .previewTitle {
+                font-size: 24px;
+                font-weight: 600;
+                color: rgb(37, 37, 37);
+            }
+
+            .previewSubtitle {
+                font-size: 16px;
+                font-weight: lighter;
+                color: $light-grey;
+            }
+
+            .readmore {
+                font-size: 11px;
+                color: $light-grey;
+                text-decoration: underline;
+                margin-bottom: 4px;
+
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: initial;
+        }
+
+    }
+
+    .blog-overview-footer {
+        font-size: 14px;
+    }
+}
+
+// read more button
+.readMore {
+    text-align: center;
+    margin: 20px auto;
+
+    .btn {
+        background-color: $blue !important;
+        border: 1px solid $blue !important;
+        color: white !important;
+        font-size: 16px;
+    }
+}
+
+// error
+.noblogs {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.nomoreblogs {
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
+
+// side nav
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ececec;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+            color: #f1f1f1;
+        }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 30px;
+        text-decoration: none !important;
+        line-height: 30px;
+        padding: 0 !important;
+    }
+
+    .table-responsive {
+        overflow-x: hidden !important;
+
+        table {
+            thead th {
+                text-align: center;
+            }
+
+            tbody {
+                tr {
+                    td {
+                        text-align: center;
+
+                        &:first-child {
+                            width: 300px;
+                            text-align: left !important;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+
+                &>tr:hover {
+                    background-color: #f8f8f8;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .pulse_anim {
+
+            background-color: $blue !important;
+            color: white;
+            transition: all .2s;
+        }
+    }
+}
+
+
+
+@media screen and (max-height: 450px) {}
+
+// common
+a:active,
+a:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+}
+
+// bootstrap overriding
+.navbar-custom {
+    border-radius: 0px !important;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+
+    a {
+        text-decoration: none !important;
+        color: rgb(200, 200, 200) !important;
+
+        &:hover {
+            color: #fff !important;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {}
+
+@media only screen and (max-width : 480px) {
+
+    // side nav
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .scrapperContainer {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width : 992px) {}
+
+@media only screen and (max-width : 1200px) {}
